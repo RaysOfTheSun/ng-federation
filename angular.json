@@ -106,19 +106,6 @@
 						"scripts": []
 					}
 				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"projects/ng-home/tsconfig.app.json",
-							"projects/ng-home/tsconfig.spec.json",
-							"projects/ng-home/e2e/tsconfig.json"
-						],
-						"exclude": [
-							"**/node_modules/**"
-						]
-					}
-				},
 				"e2e": {
 					"builder": "@angular-devkit/build-angular:protractor",
 					"options": {
@@ -234,19 +221,6 @@
 						"scripts": []
 					}
 				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"projects/ng-profile/tsconfig.app.json",
-							"projects/ng-profile/tsconfig.spec.json",
-							"projects/ng-profile/e2e/tsconfig.json"
-						],
-						"exclude": [
-							"**/node_modules/**"
-						]
-					}
-				},
 				"e2e": {
 					"builder": "@angular-devkit/build-angular:protractor",
 					"options": {
@@ -285,18 +259,6 @@
 						"main": "projects/ng-material/src/test.ts",
 						"tsConfig": "projects/ng-material/tsconfig.spec.json",
 						"karmaConfig": "projects/ng-material/karma.conf.js"
-					}
-				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"projects/ng-material/tsconfig.lib.json",
-							"projects/ng-material/tsconfig.spec.json"
-						],
-						"exclude": [
-							"**/node_modules/**"
-						]
 					}
 				}
 			}
@@ -400,19 +362,6 @@
 							"projects/ng-app/src/styles.scss"
 						],
 						"scripts": []
-					}
-				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"projects/ng-app/tsconfig.app.json",
-							"projects/ng-app/tsconfig.spec.json",
-							"projects/ng-app/e2e/tsconfig.json"
-						],
-						"exclude": [
-							"**/node_modules/**"
-						]
 					}
 				},
 				"e2e": {
