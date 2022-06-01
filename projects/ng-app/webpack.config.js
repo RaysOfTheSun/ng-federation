@@ -37,8 +37,8 @@ module.exports = {
 
       // For hosts (please adjust)
       remotes: {
-        ngHome: "http://localhost:4300/remote-ng-home.js",
-        ngProfile: "http://localhost:4400/remote-ng-profile.js",
+        ngHome: "ngHome@http://localhost:4300/remote-ng-home.js",
+        ngProfile: "ngProfile@http://localhost:4400/remote-ng-profile.js",
       },
 
       shared: share({

@@ -32,7 +32,8 @@ module.exports = {
       name: "ngHome",
       filename: "remote-ng-home.js",
       exposes: {
-        "./Component": "./projects/ng-home/src/app/app.component.ts",
+        "./LandingModule":
+          "./projects/ng-home/src/app/landing/landing.module.ts",
       },
 
       // For hosts (please adjust)
@@ -63,7 +64,12 @@ module.exports = {
           strictVersion: true,
           requiredVersion: "auto",
         },
-
+        "@angular/material": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+          includeSecondaries: true,
+        },
         ...sharedMappings.getDescriptors(),
       }),
     }),
