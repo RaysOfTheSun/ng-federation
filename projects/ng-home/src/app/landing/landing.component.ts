@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { AuthService } from 'ng-auth';
 
 @Component({
@@ -7,9 +7,12 @@ import { AuthService } from 'ng-auth';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
+  @ViewChild('dynamicView', { read: TemplateRef })
+  public view: TemplateRef<any>;
+
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    console.log('[HOME]', this.authService.currUser)
+    console.log('[HOME]', this.authService.currUser);
   }
 }

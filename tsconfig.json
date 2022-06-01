@@ -14,7 +14,7 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "ng-auth": ["dist/ng-auth"],
-      "ng-material": ["dist/ng-material/ng-material", "dist/ng-material"]
+      "ng-material": ["dist/ng-material"]
     }
   }
 }

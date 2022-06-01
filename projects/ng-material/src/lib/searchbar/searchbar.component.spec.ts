@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgMaterialComponent } from './ng-material.component';
+import { SearchbarComponent } from './searchbar.component';
 
-describe('NgMaterialComponent', () => {
-  let component: NgMaterialComponent;
-  let fixture: ComponentFixture<NgMaterialComponent>;
+describe('SearchbarComponent', () => {
+  let component: SearchbarComponent;
+  let fixture: ComponentFixture<SearchbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgMaterialComponent ]
+      declarations: [ SearchbarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgMaterialComponent);
+    fixture = TestBed.createComponent(SearchbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
