@@ -1,0 +1,13 @@
+<fed-kube-shell-header></fed-kube-shell-header>
+<mat-drawer-container class="kube-shell">
+  <mat-drawer class="kube-shell__sidenav-container" mode="side" opened>
+    <fed-kube-shell-sidenav-item
+      [path]="navItem.link"
+      [label]="navItem.label"
+      *ngFor="let navItem of sideNavItems"
+    ></fed-kube-shell-sidenav-item>
+  </mat-drawer>
+  <div class="kube-shell__content">
+    <ng-content></ng-content>
+  </div>
+</mat-drawer-container>

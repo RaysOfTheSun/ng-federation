@@ -9,6 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:auth": "ng build --project=ng-auth",
+    "serve:app": "ng s --project=ng-app",
+    "serve:home": "ng s --project=ng-home",
+    "build-dev:auth": "ng b --project=ng-auth --watch",
+    "build-dev:material": "ng b --project=ng-material --watch",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,

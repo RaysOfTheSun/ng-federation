@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'ng-auth';
+import { KubeShellSideNavItem } from './ui-elements/kube-shell/providers/models/kube-shell-sidenav-item.model';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,9 @@ import { AuthService } from 'ng-auth';
 })
 export class AppComponent implements OnInit {
   title = 'ng-app';
-  public readonly navItems = [
+  public readonly navItems: KubeShellSideNavItem[] = [
     {
-      title: 'Home',
+      label: 'Overview',
       path: ['/', 'landing'],
     },
   ];

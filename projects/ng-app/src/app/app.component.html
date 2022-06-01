@@ -1,12 +1,4 @@
-<div class="shell-header">
-  <div class="shell-header__branding-container">
-    <div class="shell-header__branding">
-      <img class="shell-header__brand-image" src="assets/kube-brand.png" />
-    </div>
-  </div>
-  <div class="shell-header__breadcrumbs-container"></div>
-</div>
-<mat-drawer-container class="example-container">
+<!-- <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="true">
     <a
       class="shell-sidenav__item"
@@ -21,4 +13,7 @@
   <div class="example-sidenav-content">
     <router-outlet></router-outlet>
   </div>
-</mat-drawer-container>
+</mat-drawer-container> -->
+<fed-kube-shell [sideNavItems]="navItems">
+  <router-outlet></router-outlet>
+</fed-kube-shell>

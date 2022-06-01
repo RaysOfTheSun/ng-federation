@@ -7,13 +7,13 @@ const routes: Routes = [
     path: 'landing',
     loadChildren: () =>
       loadRemoteModule({
-        exposedModule: './LandingModule',
         type: 'module',
+        exposedModule: './LandingModule',
         remoteEntry: 'http://localhost:4300/remote-ng-home.js',
       }).then((m) => m.LandingModule),
   },
   {
-    path: '***',
+    path: '**',
     pathMatch: 'full',
     redirectTo: 'landing',
   },

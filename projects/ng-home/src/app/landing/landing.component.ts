@@ -1,5 +1,6 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { AuthService } from 'ng-auth';
+import { SearchbarComponent } from 'ng-material';
 
 @Component({
   selector: 'fed-landing',
@@ -7,9 +8,6 @@ import { AuthService } from 'ng-auth';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
-  @ViewChild('dynamicView', { read: TemplateRef })
-  public view: TemplateRef<any>;
-
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
