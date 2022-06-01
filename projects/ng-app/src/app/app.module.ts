@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthModule } from 'ng-auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     MatSidenavModule,
     MatButtonModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

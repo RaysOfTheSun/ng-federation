@@ -5,7 +5,7 @@ const share = mf.share;
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(path.join(__dirname, "../../tsconfig.json"), [
-  /* mapped paths to share */
+  "ng-auth",
 ]);
 
 module.exports = {
@@ -27,15 +27,6 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       library: { type: "module" },
-
-      // For remotes (please adjust)
-      // name: "ngApp",
-      // filename: "remoteEntry.js",
-      // exposes: {
-      //     './Component': './projects/ng-app/src/app/app.component.ts',
-      // },
-
-      // For hosts (please adjust)
       remotes: {
         ngHome: "ngHome@http://localhost:4300/remote-ng-home.js",
         ngProfile: "ngProfile@http://localhost:4400/remote-ng-profile.js",

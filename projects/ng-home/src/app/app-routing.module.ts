@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./landing/landing.module').then((m) => m.LandingModule),
   },
   {
-    path: '***',
+    path: '**',
     pathMatch: 'full',
     redirectTo: 'landing',
   },

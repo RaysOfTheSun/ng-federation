@@ -475,6 +475,37 @@
           }
         }
       }
+    },
+    "ng-auth": {
+      "projectType": "library",
+      "root": "projects/ng-auth",
+      "sourceRoot": "projects/ng-auth/src",
+      "prefix": "fedAuth",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-auth/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-auth/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-auth/src/test.ts",
+            "tsConfig": "projects/ng-auth/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-auth/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "schematics": {
