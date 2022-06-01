@@ -13,6 +13,20 @@ const routes: Routes = [
       }).then((m) => m.LandingModule),
   },
   {
+    path: 'workloads',
+    children: [
+      {
+        path: 'cron-jobs',
+        loadChildren: () =>
+          loadRemoteModule({
+            type: 'module',
+            exposedModule: './CronJobs',
+            remoteEntry: 'http://localhost:4500/ng-workloads-remote.js',
+          }).then((m) => m.CronJobsModule),
+      },
+    ],
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'landing',

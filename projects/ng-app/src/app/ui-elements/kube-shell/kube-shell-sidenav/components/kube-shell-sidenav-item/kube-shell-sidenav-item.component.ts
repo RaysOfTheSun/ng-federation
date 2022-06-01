@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { KubeShellSideNavItem } from '../../../providers/models/kube-shell-sidenav-item.model';
 
 @Component({
   selector: 'fed-kube-shell-sidenav-item',
@@ -11,6 +12,9 @@ export class KubeShellSidenavItemComponent implements OnInit {
 
   @Input()
   link: string[] = [];
+
+  @Input()
+  children?: KubeShellSideNavItem[] = [];
 
   constructor() {}
 

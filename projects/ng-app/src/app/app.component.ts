@@ -14,6 +14,15 @@ export class AppComponent implements OnInit {
       label: 'Overview',
       path: ['/', 'landing'],
     },
+    {
+      label: 'Workloads',
+      children: [
+        {
+          label: 'Cron Jobs',
+          path: ['/', 'workloads', 'cron-jobs'],
+        },
+      ],
+    },
   ];
 
   constructor(private authService: AuthService) {}

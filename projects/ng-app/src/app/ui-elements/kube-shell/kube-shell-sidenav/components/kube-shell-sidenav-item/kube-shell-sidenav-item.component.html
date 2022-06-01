@@ -1,3 +1,42 @@
-<a class="shell-sidenav-item" [routerLink]="link" mat-button>
-  {{ label }}
-</a>
+<ng-container
+  *ngIf="children.length > 0"
+  [ngTemplateOutlet]="itemWithChildren"
+  [ngTemplateOutletContext]="{ children: children, label: label, link: link }"
+></ng-container>
+
+<ng-container
+  *ngIf="children.length == 0"
+  [ngTemplateOutlet]="navItem"
+  [ngTemplateOutletContext]="{ label: label, link: link, heading: true }"
+></ng-container>
+
+<ng-template #itemWithChildren let-label="label" let-children="children">
+  <ng-container
+    [ngTemplateOutlet]="headerNavHeader"
+    [ngTemplateOutletContext]="{ label: label }"
+  ></ng-container>
+  <div class="shell-sidenav-item__children">
+    <ng-container
+      *ngFor="let child of children"
+      [ngTemplateOutlet]="navItem"
+      [ngTemplateOutletContext]="{ label: child.label, link: child.path }"
+    ></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #headerNavHeader let-link="link" let-label="label">
+  <a class="shell-sidenav-item--header">
+    {{ label }}
+  </a>
+</ng-template>
+
+<ng-template #navItem let-link="link" let-label="label" let-heading="heading">
+  <a
+    class="shell-sidenav-item"
+    [class.shell-sidenav-item--header]="heading"
+    [routerLink]="link"
+    mat-button
+  >
+    {{ label }}
+  </a>
+</ng-template>

@@ -3,4 +3,16 @@
   padding: 4px 8px;
   display: inline-block;
   text-align: left;
+  cursor: pointer;
+
+  &--header {
+    cursor: default;
+    font-size: 1.1rem;
+    font-weight: 500;
+    @extend.shell-sidenav-item;
+  }
+
+  &__children {
+    margin-left: 16px;
+  }
 }

@@ -2,8 +2,9 @@
 <mat-drawer-container class="kube-shell">
   <mat-drawer class="kube-shell__sidenav-container" mode="side" opened>
     <fed-kube-shell-sidenav-item
-      [path]="navItem.link"
+      [link]="navItem.path"
       [label]="navItem.label"
+      [children]="navItem.children || []"
       *ngFor="let navItem of sideNavItems"
     ></fed-kube-shell-sidenav-item>
   </mat-drawer>

@@ -1,4 +1,5 @@
 export interface KubeShellSideNavItem {
-  path: string[];
+  path?: string[];
   label: string;
+  children?: KubeShellSideNavItem[];
 }
