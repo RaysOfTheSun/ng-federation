@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { PlaceholderHeaderComponent } from 'ng-material';
 import { AuthService } from 'ng-auth';
-import { SearchbarComponent } from 'ng-material';
 
 @Component({
   selector: 'fed-landing',
@@ -8,9 +8,16 @@ import { SearchbarComponent } from 'ng-material';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
+  @ViewChild('dynamicPlaceholder', { read: ViewContainerRef, static: true })
+  public dynamicPlaceholder: ViewContainerRef;
+
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    console.log('[HOME]', this.authService.currUser);
+    const dynamicPlaceholder = this.dynamicPlaceholder.createComponent(
+      PlaceholderHeaderComponent
+    );
+
+    dynamicPlaceholder.instance.heading = 'Landing Page Placeholder'
   }
 }
