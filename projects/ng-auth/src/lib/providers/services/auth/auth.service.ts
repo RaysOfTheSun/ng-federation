@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { KubeUser } from '../../models/user.model';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class AuthService {
   public currUser: KubeUser = null;
 

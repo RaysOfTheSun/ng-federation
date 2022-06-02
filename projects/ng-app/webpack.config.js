@@ -59,6 +59,12 @@ module.exports = {
           requiredVersion: "auto",
           includeSecondaries: true,
         },
+        "angular-l10n": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+          includeSecondaries: true,
+        },
         ...sharedMappings.getDescriptors(),
       }),
     }),
