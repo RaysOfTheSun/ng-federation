@@ -27,6 +27,13 @@ const routes: Routes = [
     ],
   },
   {
+    path: 'error',
+    loadChildren: () =>
+      import('./remote-error/remote-error.module').then(
+        (m) => m.RemoteErrorModule
+      ),
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'landing',
@@ -34,7 +41,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
